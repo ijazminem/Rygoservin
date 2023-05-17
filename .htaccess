@@ -1,0 +1,65 @@
+# URLS AMIGABLES
+Options +FollowSymLinks
+RewriteEngine on
+
+# LOGIN
+RewriteRule ^area/admin/logout$ area/admin/logout.php
+
+# USUARIOS
+RewriteRule ^area/admin/nuevo_usuario$ area/admin/nuevo_usuario.php
+RewriteRule ^area/admin/lista_usuarios$ area/admin/lista_usuarios.php
+RewriteRule ^area/admin/modificar_usuario/([0-9]+)$ area/admin/modificar_usuario.php?id_usuario=$1
+RewriteRule ^area/admin/usuario/([0-9]+)$ area/admin/usuario.php?id_usuario=$1
+
+# PROMESAS_DE_PAGO
+RewriteRule ^area/admin/nueva_promesa_de_pago/([0-9]+)$ area/admin/nueva_promesa_de_pago.php?dui=$1
+RewriteRule ^area/admin/modificar_promesa_de_pago/([0-9]+)$ area/admin/modificar_promesa_de_pago.php?id_promesa=$1
+RewriteRule ^area/admin/promesa_de_pago/([0-9]+)$ area/admin/promesa_de_pago.php?id_promesa=$1
+
+#CLIENTES
+RewriteRule ^area/admin/nuevo_cliente/([0-9]+)$ area/admin/nuevo_cliente.php?id_cartera=$1
+RewriteRule ^area/admin/modificar_cliente/([0-9]+)$ area/admin/modificar_cliente.php?dui=$1
+RewriteRule ^area/admin/lista_clientes/([0-9]+)$ area/admin/lista_clientes.php?id_cartera=$1
+RewriteRule ^area/admin/cliente/([0-9]+)$ area/admin/cliente.php?dui=$1
+
+#CARTERAS
+RewriteRule ^area/admin/nueva_cartera$ area/admin/nueva_cartera.php
+RewriteRule ^area/admin/modificar_cartera/([0-9]+)$ area/admin/modificar_cartera.php?id_cartera=$1
+RewriteRule ^area/admin/lista_carteras$ area/admin/lista_carteras.php
+RewriteRule ^area/admin/cartera/([0-9]+)$ area/admin/cartera.php?id_cartera=$1
+
+#USUARIO_CARTERA
+RewriteRule ^area/admin/nuevo_usuario_cartera/([0-9]+)$ area/admin/nuevo_usuario_cartera.php?id_usuario=$1
+RewriteRule ^area/admin/modificar_usuario_cartera/([0-9]+)$ area/admin/modificar_usuario_cartera.php?id_usuario_cartera=$1
+
+#ARCHIVO
+RewriteRule ^area/admin/nuevo_archivo/([0-9]+)$ area/admin/nuevo_archivo.php?id_proceso=$1
+RewriteRule ^area/admin/modificar_archivo/([0-9]+)$ area/admin/modificar_archivo.php?id_archivo=$1
+
+#PROCESO_JUDICIAL
+RewriteRule ^area/admin/nuevo_proceso_judicial/([0-9]+)$ area/admin/nuevo_proceso_judicial.php?dui=$1
+RewriteRule ^area/admin/modificar_proceso_judicial/([0-9]+)$ area/admin/modificar_proceso_judicial.php?id_proceso=$1
+RewriteRule ^area/admin/proceso_judicial/([0-9]+)$ area/admin/proceso_judicial.php?id_proceso=$1
+
+#BITACORAS
+RewriteRule ^area/admin/nueva_bitacora/([0-9]+)$ area/admin/nueva_bitacora.php?id_proceso=$1
+RewriteRule ^area/admin/modificar_bitacora/([0-9]+)$ area/admin/modificar_bitacora.php?id_bitacora=$1
+
+#ESTADOS
+RewriteRule ^area/admin/nuevo_estado/([0-9]+)$ area/admin/nuevo_estado.php?id_cartera=$1
+RewriteRule ^area/admin/modificar_estado/([0-9]+)$ area/admin/modificar_estado.php?id_estado=$1
+RewriteRule ^area/admin/lista_estados/([0-9]+)$ area/admin/lista_estados.php?id_cartera=$1
+RewriteRule ^area/admin/estado/([0-9]+)$ area/admin/estado.php?id_estado=$1
+
+#SUB-ESTADOS
+RewriteRule ^area/admin/nuevo_sub_estado/([0-9]+)$ area/admin/nuevo_sub_estado.php?id_estado=$1
+RewriteRule ^area/admin/modificar_sub_estado/([0-9]+)$ area/admin/modificar_sub_estado.php?id_sub_estado=$1
+
+#DEUDA
+RewriteRule ^area/admin/nueva_deuda/([0-9]+)$ area/admin/nueva_deuda.php?dui=$1
+RewriteRule ^area/admin/modificar_deuda/([0-9]+)$ area/admin/modificar_deuda.php?id_deuda=$1
+RewriteRule ^area/admin/deuda/([0-9]+)$ area/admin/deuda.php?id_deuda=$1
+
+#GESTIONES
+RewriteRule ^area/admin/nueva_gestion/([0-9]+)$ area/admin/nueva_gestion.php?dui=$1
+RewriteRule ^area/admin/modificar_gestion/([0-9]+)$ area/admin/modificar_gestion.php?id_gestion=$1
